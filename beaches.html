@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Guide – Beaches</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: url('https://static.vecteezy.com/system/resources/previews/018/991/313/original/soft-gradient-abstract-with-orange-tones-gradient-background-blurred-gradient-texture-decorative-element-wallpaper-vector.jpg') no-repeat center/cover;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00ffff;
+      text-decoration: none;
+    }
+    .logo span {
+      color: #fff;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #00ffff;
+    }
+
+    /* Main Content */
+    main {
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1.heading {
+      text-align: center;
+      font-size: 36px;
+      margin: 30px 0 40px;
+      color: #007a87;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    /* Flex container for horizontal layout */
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 3px solid #00ffff;
+      transition: transform 0.4s ease;
+    }
+
+    .box:hover img {
+      transform: scale(1.05);
+    }
+
+    .content {
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #007a87;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .content h3 i {
+      color: #00cccc;
+    }
+
+    .content p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+
+    .back-link a {
+      color: #007a87;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .back-link a:hover {
+      border-color: #00ffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+      nav a {
+        margin: 10px;
+      }
+      .box {
+        width: 100%;
+      }
+      .box img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo"><span>T</span>rip Topia</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="states.html">States</a>
+      <a href="islands.html">Islands</a>
+      <a href="beaches.html" class="active">Beaches</a>
+      <a href="others.html">Others</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="heading">Beautiful Beaches Around The World</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.XpgSeVjFgsOILMNNxquIDQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Copacabana, Brazil">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Copacabana, Brazil</h3>
+          <p>Known for its 4 km stretch of golden beach life.</p>
+          <p>Famous food: Fried shrimp, açaí bowls</p>
+          <p>Size: 4 km</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://media.california.com/media/_versions_jpg/articlecomponent/santa_monica_pier__3896x2920____v1220x__.jpg" alt="Santa Monica, USA">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Santa Monica, USA</h3>
+          <p>Known for its pier, surfing spots, and sunsets.</p>
+          <p>Famous food: Chowder, lobster bisque</p>
+          <p>Size: 21.8 km²</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.4dwV06FZpa-THy1otaXiXQHaE8" alt="South Beach, Miami">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> South Beach, Miami</h3>
+          <p>Popular for nightlife and art deco vibes.</p>
+          <p>Famous food: Stubborn Seeds, crab</p>
+          <p>Size: 2.5 sq mi</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.49ZFNe2HCY3QKH4No0UCewHaE8" alt="Renaissance Island, Aruba">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Renaissance Island, Aruba</h3>
+          <p>Private island with flamingo and iguana beaches.</p>
+          <p>Famous food: Sushi, Dutch pancakes</p>
+          <p>Size: 0.48 km²</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.OrtcOeq3ek9wiFMJWcmTowHaE8" alt="Waikiki, Hawaii">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Waikiki, Hawaii</h3>
+          <p>Historic Hawaiian beach with great surf and sunsets.</p>
+          <p>Famous food: Shave ice, pie</p>
+          <p>Size: 2 miles</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.xBbdpU3sSV6otqRspMnB8AHaE8" alt="Goa, India">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Goa, India</h3>
+          <p>Known for nightlife, parties, and seafood.</p>
+          <p>Famous food: Bebinca, Ros omelette</p>
+          <p>Size: 3,700 km²</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.HjkxXa-hMo1EnZoXU_d2qwHaE8" alt="Kovalam, Kerala">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Kovalam, Kerala</h3>
+          <p>Crescent-shaped beaches with calm waters.</p>
+          <p>Famous food: Coconut-based seafood</p>
+          <p>Size: 4.98 km²</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.DesX_UtTdk5CkvL5t4aklQHaEK" alt="Radhanagar Beach, Andamans">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Radhanagar Beach</h3>
+          <p>One of Asia’s best beaches in the Andaman Islands.</p>
+          <p>Famous food: Bhel, chaat</p>
+          <p>Size: 2 km</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://i.pinimg.com/originals/8f/83/10/8f831008b795f01204df1bc4f1c77ee0.jpg" alt="Juhu Beach, Mumbai">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Juhu Beach, Mumbai</h3>
+          <p>Popular Mumbai beach facing the Arabian Sea.</p>
+          <p>Famous food: Pav bhaji</p>
+          <p>Size: 6 km</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="back-link"><a href="index.html">← Back to Home</a></p>
+  </main>
+
+</body>
+</html>

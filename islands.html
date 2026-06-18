@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Guide – Islands</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('https://tse3.mm.bing.net/th/id/OIP.XhgzO1-0TDiHxkOsy-hVpQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-attachment: fixed;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1200px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #00ffff;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 16px;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 40px 30px;
+    }
+
+    h1.heading {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #007a87;
+      letter-spacing: 1.2px;
+    }
+
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    }
+
+    .box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 4px solid #00ffff;
+      transition: transform 0.4s ease;
+    }
+
+    .box:hover img {
+      transform: scale(1.05);
+    }
+
+    .content {
+      padding: 20px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content h3 {
+      font-size: 22px;
+      color: #007a87;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content h3 i {
+      color: #00cccc;
+      font-size: 20px;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      color: #007a87;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .back-link a:hover {
+      border-color: #00ffff;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 12px;
+        font-size: 14px;
+      }
+      .box img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><span>T</span>rip Topia</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="states.html">States</a>
+      <a href="islands.html" class="active">Islands</a>
+      <a href="beaches.html">Beaches</a>
+      <a href="others.html">Others</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="heading">Islands</h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.-9bhH2u0Po41dqkzAJlEWwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Palawan" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Palawan</h3>
+          <p>The largest island of the province of Palawan in the Philippines.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://windows10spotlight.com/wp-content/uploads/2023/07/200d0f3c8ae87575429c8eeca0d9b570.jpg" alt="Sardinia" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Sardinia</h3>
+          <p>A popular Mediterranean cruise stop, this Italian island has a subtropical climate.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nhNdjhM0nSZ1nOjMEm-dFQHaEV?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mauritius" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Mauritius</h3>
+          <p>Officially the Republic of Mauritius, an island country in the Indian Ocean.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.ErDlLv6ojcRiY9yIlj6SAQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Santorini" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Santorini</h3>
+          <p>Greek island in the southern Aegean Sea, about 200 km southeast from the mainland.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://cdn.odysseytraveller.com/app/uploads/2019/02/GettyImages-908452852.jpg" alt="Faroe Islands" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Faroe Islands</h3>
+          <p>Located in the Atlantic Ocean halfway between Iceland and Norway.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.2-P4lLThnKiqRfV-hY5MEQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tahiti" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Tahiti</h3>
+          <p>The largest island of the Windward group of the Society Islands in French Polynesia.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.R2_W9e6erVdQhkPsaT6rcgHaFc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Alexander Island" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Alexander Island</h3>
+          <p>Also known as Alexander I Island, located in Antarctica.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://th.bing.com/th/id/R.69ea0c38df5de38ffbb8b7ebef03d3ce?rik=EIya%2fjUQC4sppQ&riu=http%3a%2f%2fbeautifulplacestovisit.com%2fwp-content%2fuploads%2f2012%2f01%2fMoai_Statues_Easter_Island_06.jpg&ehk=rpI%2bT8kx%2bL7H9SUUO6r3MM0R4tP48l4TaTO8Gl74iNI%3d&risl=&pid=ImgRaw&r=0" alt="Easter Island" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Easter Island</h3>
+          <p>An island and special territory of Chile in the southeastern Pacific Ocean.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.8V0VkEa7z2m_ThizYfzwMQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Greenland" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Greenland</h3>
+          <p>Greenland is an autonomous territory in the Kingdom of Denmark.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="back-link"><a href="index.html">← Back to Home</a></p>
+  </main>
+</body>
+</html>
+

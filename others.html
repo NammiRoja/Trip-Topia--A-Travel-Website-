@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Guide – Places of Interest</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: url('https://tse3.mm.bing.net/th/id/OIP.81QyPdi59-4lmB0s54ttcQHaGl?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      /* subtle overlay for readability */
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      color: #00ffff;
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+      user-select: none;
+      letter-spacing: 1.5px;
+    }
+    .logo span {
+      color: #fff;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 16px;
+      padding: 5px 8px;
+      border-radius: 5px;
+    }
+    nav a.active,
+    nav a:hover {
+      background: #00ffff;
+      color: #000;
+    }
+
+    /* Main container */
+    main {
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 40px 30px;
+    }
+
+    /* Heading */
+    h1.heading {
+      text-align: center;
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: #007a87;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Grid container */
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+    }
+
+    /* Card style box */
+    .box {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      will-change: transform;
+    }
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Image with fixed aspect ratio */
+    .box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 5px solid #00ffff;
+      transition: transform 0.4s ease;
+    }
+    .box:hover img {
+      transform: scale(1.07);
+    }
+
+    /* Content */
+    .content {
+      padding: 25px 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content h3 {
+      font-size: 24px;
+      color: #007a87;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: capitalize;
+    }
+    .content h3 i {
+      color: #00cccc;
+      font-size: 22px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    /* Back link */
+    .back-link {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .back-link a {
+      color: #007a87;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 20px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .back-link a:hover {
+      border-color: #00ffff;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 12px;
+        font-size: 14px;
+      }
+      .box img {
+        height: 180px;
+      }
+      main {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><span>T</span>rip Topia</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="states.html">States</a>
+      <a href="islands.html">Islands</a>
+      <a href="beaches.html">Beaches</a>
+      <a href="others.html" class="active">Others</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="heading">Places of Interest</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.A4_88Sim_0iP5dbArDflKwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Shopping malls" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> shopping malls</h3>
+          <p>Many more existing options are there like shopping.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://media.timeout.com/images/105819546/image.jpg" alt="Movie theaters" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> movie theaters</h3>
+          <p>Enjoy watching movies.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.ZzgfEdO-cl3u5n_WBid2vQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Zoos" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> zoos</h3>
+          <p>Spend some time with those cuties.</p>
+        </div>
+      </div>
+      
+      <div class="box">
+        <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_864,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/wv5xsszdvvd3vgqyrt3u/SeaWorldOrlandoThemeParkTickets.jpg" alt="Water rides" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Water rides</i> </h3>
+          <p>Its time to play with water</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://wallpapercave.com/wp/wp3251792.jpg" alt="Mountains" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Mountains</i> </h3>
+          <p>Nothing is more great then a treaking</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://media.timeout.com/images/105873876/750/562/image.jpg" alt="Restaurants" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Restaurants</i> </h3>
+          <p>You might be tied after a long travelling. Its time to eat now.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <p class="back-link"><a href="index.html">← Back to Home</a></p>
+  </main>
+</body>
+</html>

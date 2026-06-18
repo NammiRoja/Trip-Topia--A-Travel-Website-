@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Guide – Countries</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('https://wallpapercave.com/wp/wp3514361.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 15px 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      color: #00ffff;
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+      user-select: none;
+    }
+    .logo span {
+      color: #fff;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 16px;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    /* Main container */
+    main {
+      width: 100%;
+      max-width: 1200px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 40px 30px;
+    }
+
+    /* Heading */
+    h1.heading {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #007a87;
+      letter-spacing: 1.2px;
+    }
+
+    /* Grid container */
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    /* Each box */
+    .box {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    }
+
+    .box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 4px solid #00ffff;
+      transition: transform 0.4s ease;
+    }
+    .box:hover img {
+      transform: scale(1.05);
+    }
+
+    .content {
+      padding: 20px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content h3 {
+      font-size: 22px;
+      color: #007a87;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .content h3 i {
+      color: #00cccc;
+      font-size: 20px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    /* Back link */
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-link a {
+      color: #007a87;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .back-link a:hover {
+      border-color: #00ffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 12px;
+        font-size: 14px;
+      }
+      .box img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><span>T</span>rip Topia</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="states.html" class="active">States</a>
+      <a href="islands.html">Islands</a>
+      <a href="beaches.html">Beaches</a>
+      <a href="others.html">Others</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="heading">States</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.CxHuTJ_bC3Z3DYuPbWM2gwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Alaska" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Alaska</h3>
+          <p>The Northern Lights and Fishing Bears.</p>
+             <p>Official language:- Tanacross,Ahtna etc.</p>
+          <p>Famous food:- Reindeer Sausage, Eskimo ice cream</p>
+          <p>Famous places:- Denali National park, Wrangell St Elias national park</p>
+          
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.g5_p5yFr8O_pkVhQrUEegwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="California" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> California</h3>
+          <p>Giant Trees, Hollywood, and Death Valley.</p>
+             <p>Official language:- English</p>
+         <p> Famous food:- Avocado toast, fortune cookie</p>
+          <p>Famous places:- Golden gate bridge, Disneyland, Hollywood</p>
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Hawaii" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Hawaii</h3>
+          <p>Volcanoes and Surfing.</p>
+             <p>Official language:- Hawaiian</p>
+          <p>Famous food:- Poke bowl, Kalua pork</p>
+          <p>Famous places:- Waikiki, Hana</p>
+        
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://wallpapercave.com/wp/wp8560494.jpg" alt="Mizoram" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Mizoram</h3>
+          <p>Mizoram is a landlocked state in North East India. </p>
+            <p> Official language:- Tibeto Burman language</p>
+      <p>  Famous food:- Bai</p>
+         <p> Famous places:- Aizawl, Vantawang falls</p>
+         
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://www.gujarattourguide.in/images/gallery-img2.jpg" alt="Gujarat" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Gujarat</h3>
+          <p>A state along the western coast of India.</p>
+             <p>Official language:- Gujarati </p>
+          <p>Famous food:- Dhokla</p>
+         <p>Famous places:- Shaktipeethas, Jyotirlinga</p>
+         
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://static.toiimg.com/photo/msid-93874762,width-96,height-65.cms" alt="Kerala" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Kerala</h3>
+          <p>Kerala is a state on the Malabar Coast of India.</p>
+           <p>  Official language:- Malayalam</p>
+          <p>Famous food:- Puttu and kadala curry</p>
+       <p>   Famous places:- Munnar, Alleppey, Kochi</p>
+         
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.uaBssIdbAV4nNGk8wZZFcgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Montana" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Montana</i></h3>
+          <p>Montana  is a landlocked state in the Mountain West subregion of the Western United States.</p>
+             <p>Official language:- English</p>
+         <p> Famous food:- Huckleberry desserts, Trout</p>
+        <p>  Famous places:- Upper Missouri River breaks National mounment</p>
+         
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2023/06/unique-things-to-do-in-tripura.jpg?fit=1600%2C1066&ssl=1" alt="Tripura" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Tripura</i> </h3>
+          <p>Tripura is a state in northeastern India. The third-smallest state in the country</p>
+             <p>Official language:- Bengali</p>
+          <p>Famous food:- Mui Borok, Kosai Bwtwi</p>
+        <p>  Famous places:- Unakoti, Jampui hills</p>
+         
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.lq8q8L4UjLLiQa6JbjoHqwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Nagaland" />
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt">Nagaland</i></h3>
+          <p>Nagaland is a state in the north-eastern region of India. </p>
+            <p> Official language:- English</p>
+        <p> Famous food:- Nagaland pork, fish</p>
+         <p> Famous places:- Zoological parks, state Museum</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <p class="back-link"><a href="index.html">← Back to Home</a></p>
+  </main>
+</body>
+</html>

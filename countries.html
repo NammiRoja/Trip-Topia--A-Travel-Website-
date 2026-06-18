@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Travel Guide – Countries</title>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<style>
+  /* Reset & Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: url('https://tse1.mm.bing.net/th/id/OIP.szhpeFnsf5d_LYZ9ABmGtQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+
+  header {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(0,0,0,0.85);
+    padding: 15px 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .logo {
+    color: #00ffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+  }
+  .logo span {
+    color: #fff;
+  }
+  nav a {
+    color: #fff;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a.active,
+  nav a:hover {
+    background: #00ffff;
+    color: #000;
+  }
+
+  main {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 40px 30px;
+  }
+
+  h1.heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #007a87;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+  }
+
+  .box {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+
+  .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #00ffff;
+    transition: transform 0.4s ease;
+  }
+  .box:hover img {
+    transform: scale(1.07);
+  }
+
+  .content {
+    padding: 25px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content h3 {
+    font-size: 24px;
+    color: #007a87;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: capitalize;
+  }
+  .content h3 i {
+    color: #00cccc;
+    font-size: 22px;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1;
+  }
+
+  .back-link {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .back-link a {
+    color: #007a87;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .back-link a:hover {
+    border-color: #00ffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    nav a {
+      margin-left: 12px;
+      font-size: 14px;
+    }
+    .box img {
+      height: 180px;
+    }
+    main {
+      padding: 30px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><span>T</span>rip Topia</a>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="countries.html" class="active">Countries</a>
+    <a href="states.html">States</a>
+    <a href="islands.html">Islands</a>
+    <a href="beaches.html">Beaches</a>
+    <a href="others.html">Others</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="heading">Countries</h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Italy" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Italy</h3>
+        <p>The artistic jewel of Europe.</p>
+          <p>Official language:- Italin </p>
+          <p>Famous food:- Cacio e pepe,Risotto, Orecchiette </p>
+          <p>Famous places:- Rome,Vatican city,lake como </p>
+          <p>Famous customs:- Ferragosto ,Carnevale,Easter 
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://res.cloudinary.com/jnto/image/upload/w_2000,h_1309,c_fill,f_auto,fl_lossy,q_auto/v1/media/filer_public/d4/ce/d4ce9c41-6bfe-4996-a998-271866907abd/02shutterstock_188615729_zynqxa" alt="Japan" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Japan</h3>
+        <p>Mount Fuji (Fuji-san), Japan’s highest mountain at 3,776 meters.</p>
+          <p>Official language:- Japanese</p>
+          <p>Famous food:- Sushi, Ramen,Tempura,Soba</p>
+          <p>Famous places:- Mount Fuji, Imperial Tokyo,Kyoto</p>
+          <p>Famous customs:- Bowing, Japanese slipper,Japanese anime
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://i.pinimg.com/originals/d3/77/e2/d377e2f19a8e16e6cb1c8110fd2e640b.jpg" alt="Australia" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Australia</h3>
+        <p>Sovereign country with mainland Australia, Tasmania & many islands.</p>
+          <p> Official language:-English</p>
+          <p>Famous food:- Aussie Meat pie, Barramundi,Vegemite</p>
+          <p>Famous places:- Sydney opera house, Great barrier reef, Uluru</p>
+          <p>Famous customs:- Liveable cities, Venomus creatures
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://cdn1.matadornetwork.com/blogs/1/2019/01/View-of-the-city-center-and-Nydeggbrucke-bridge-over-river-Aare-Switzerland.jpg" alt="Switzerland" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Switzerland</h3>
+        <p>A federal republic in Europe, famous for its mountains and lakes.</p>
+           <p>Official language:- Russian,Italian,Germany</p>
+         <p> Famous food:- Esudella,Potato panckae,Dolma</p>
+          <p>Famous places:- Eifel Tower, Rome, Paris,Greece</p>
+          <p>Famous customs:- Art, archtiture,folklore
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.MjrkLMwTbJPhc9o0TCl4KwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sweden" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Sweden</h3>
+        <p>Scandinavian country in Northern Europe, known for nature & design.</p>
+          <p>Official language:-Swedish language</p>
+          <p>Famous food:- Kalops, Falukorv,Toast Skagen</p>
+          <p>Famous places:- Stockholm,Gothenburg, Malmo</p>
+          <p>Famous customs:- Midsommar
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://cdn.pixabay.com/photo/2020/04/28/12/55/lagoon-5104385__480.jpg" alt="Iceland" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Iceland</h3>
+        <p>Nordic island in the North Atlantic, sparsely populated and scenic.</p>
+           <p>Official language:- Icelandic language</p>
+         <p> Famous food:- Skyr, Icelandic SS-hot dog,lamb</p>
+        <p>Famous places:- Blue laggon and Sky laggon, Golden Circle</p>
+         <p> Famous customs:-folk dances
+        </p>
+      </div>
+    </div>
+
+     <div class="box">
+      <img src="https://www.thoughtco.com/thmb/mmpjK8CDFzUJGNJ3-OaqLUwutjU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-480604953-589aac555f9b5874ee32b9b1.jpg" alt="Nepal" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt">Nepal</i> </h3>
+        <p>Nepal, officially the Federal Democratic Republic of Nepal</p>
+           <p>Official language:- Nepali</p>
+          <p>Famous food:- Sel roti, Gundruk,Samosa</p>
+         <p> Famous places:- Kathmandu valley, Solukhumbu District</p>
+         <p> Famous customs:- following etiqueetes
+        </p>
+      </div>
+    </div>
+     <div class="box">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.a7kTttQwM7ayQ-1cAC_xTAHaDr?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Peru" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt">Peru</i> </h3>
+        <p>Peru, country in western South America.</p>
+           <p>Official language:- Spanish</p>
+         <p> Famous food:- Ceviche,Lomo Saltado,Cuy</p>
+          <p>Famous places:- Machu Picchu, Caral,Kuelap</p>
+         <p> Famous customs:- football,pacific seafood
+        </p>
+      </div>
+    </div>
+     <div class="box">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.64fXjyvAa2ZeueH_7Ltn9QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Fiji" />
+      <div class="content">
+        <h3><i class="fas fa-map-marker-alt">Fiji</i> </h3>
+        <p>Fiji is an island country and archipelago in the South Pacific Ocean.</p>
+         <p>  Official language:- Fijian,English</p>
+         <p> Famous food:- Kokoda, Lovo,Duruka,Taro</p>
+         <p> Famous places:- Sawa-i-lau caves, Wainibau falls</p>
+         <p> Famous customs:- Lovo lovo, firewalking 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <p class="back-link"><a href="index.html">← Back to Home</a></p>
+</main>
+
+</body>
+</html>
